@@ -467,15 +467,15 @@ if companhia_select != 'Selecione a companhia aérea':
 
 ## Filtrando aeroporto
 if sigla_companhia_select != ' ':
-    tatic35 = tatic4_aux[tatic4_aux['indicativo'].str[:3] == sigla_companhia_select]
-    tatic36 = tatic11_aux[tatic11_aux['indicativo'].str[:3] == sigla_companhia_select]
+    tatic35 = tatic4_aux[tatic4_aux['Sigla ICAO Empresa Aérea'] == sigla_companhia_select]
+    tatic36 = tatic11_aux[tatic11_aux['Sigla ICAO Empresa Aérea'] == sigla_companhia_select]
 else:
     tatic35 = tatic4_aux
     tatic36 = tatic11_aux
 
 if sigla_aeroporto_select != ' ':
-    tatic37 = tatic35[tatic35['Descrição Aeroporto Origem'] == sigla_aeroporto_select]
-    tatic38 = tatic36[tatic36['Descrição Aeroporto Origem'] == sigla_aeroporto_select]
+    tatic37 = tatic35[tatic35['Sigla ICAO Aeroporto Origem'] == sigla_aeroporto_select]
+    tatic38 = tatic36[tatic36['Sigla ICAO Aeroporto Origem'] == sigla_aeroporto_select]
 else:
     tatic37 = tatic35
     tatic38 = tatic36
@@ -499,6 +499,7 @@ metar4_aux3['temperatura de orvalho (Nr)'] = metar4_aux3['temperatura de orvalho
 metar4_aux4 = metar4_aux3[metar4_aux3['vento (Nr)'] != ' ']
 metar4_aux4['vento (Nr)'] = metar4_aux4['vento (Nr)'].astype(int)
 metar4_aux4['pressão (Nr)'] = metar4_aux4['pressão (Nr)'].astype(int)
+
 
 if (aeroporto_select == 'Selecione o aeroporto'):
 
