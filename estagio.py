@@ -474,8 +474,8 @@ else:
     tatic36 = tatic11_aux
 
 if sigla_aeroporto_select != ' ':
-    tatic37 = tatic35[tatic35['adep'] == sigla_aeroporto_select]
-    tatic38 = tatic36[tatic36['adep'] == sigla_aeroporto_select]
+    tatic37 = tatic35[tatic35['Descrição Aeroporto Origem'] == sigla_aeroporto_select]
+    tatic38 = tatic36[tatic36['Descrição Aeroporto Origem'] == sigla_aeroporto_select]
 else:
     tatic37 = tatic35
     tatic38 = tatic36
